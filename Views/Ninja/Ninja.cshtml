@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Money</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+         <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body background="Content/Images/image1.jpg">
+        <div id="wrapper">
+            <div id="top">
+                <p class="red">Your Gold  @ViewBag.activities</p>
+            </div>
+            <div id="boxes">
+                <div id="box1">
+                    <h1>Farm</h1>
+                    <p class="gold">(earns 10-20 golds)</p>
+                    <form action="/process_money" method="post">
+                         <input type="hidden" name="building" value="farm" />
+                         <input type="submit" value="Find Gold!"/>
+                    </form> 
+                </div>
+                <div id="box2">
+                    <h1>Cave</h1>
+                    <p class="gold">(earns 5-10 golds)</p>
+                    <form action="/process_money" method="post">
+                         <input type="hidden" name="building" value="cave" />
+                         <input type="submit" value="Find Gold!"/>
+                    </form> 
+                </div>
+                <div id="box3">
+                    <h1>House</h1>
+                    <p class="gold">(earns 2-5 golds)</p>
+                    <form action="/process_money" method="post">
+                         <input type="hidden" name="building" value="house" />
+                         <input type="submit" value="Find Gold!"/>
+                    </form> 
+                </div>
+                <div id="box4">
+                    <h1>Casino</h1>
+                    <p class="gold">(earns 0-25 golds)</p>
+                    <form action="/process_money" method="post">
+                         <input type="hidden" name="building" value="casino" />
+                         <input type="submit" value="Find Gold!"/>
+                    </form> 
+                </div>
+                <p class="red">Activites</p>
+                <div class="box_style">
+                    @ViewBag.display
+                </div>
+            </div>
+        </div>
+    </body>
+</html>	
